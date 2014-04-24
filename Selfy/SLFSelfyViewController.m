@@ -91,21 +91,28 @@
 
 }
 
-//-(void)newSelfy
-//{
-//    PFObject *testObject = [PFObject objectWithClassName:@"newSelfy"];
-//    newSelfy [@"foo"] = @"bar";
-//    [newSelfy saveInBackground];
-//    
-//
-//}
-//- (BOOL)textViewShouldReturn:(UITextView *)textView;
-//{
-//    [caption resignFirstResponder];
-//    
-//    
-//    return YES;
-//}
+-(void)newSelfy
+{
+    PFObject * testObject = [PFObject objectWithClassName:@"newSelfy"];
+    newSelfy [@"foo"] = @"bar";
+    [newSelfy saveInBackground];
+    
+    
+    // PFObject "UserSelfy"
+    // put a png file inside app
+    // research PFFile
+    
+    //
+    
+
+}
+- (BOOL)textViewShouldReturn:(UITextView *)textView;
+{
+    [caption resignFirstResponder];
+    
+    
+    return YES;
+}
 
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {

@@ -8,6 +8,8 @@
 
 #import "SLFViewController.h"
 #import <Parse/Parse.h>
+#import "SLFTableViewController.h"
+#import "SLFSelfyViewController.h" 
 
 @interface SLFViewController ()
 
@@ -52,7 +54,7 @@
         
         SignIn.backgroundColor = [UIColor blueColor];
         SignIn.layer.cornerRadius = 6;
-        [SignIn addTarget:self action:@selector(newUser) forControlEvents:UIControlEventTouchUpInside];
+        [SignIn addTarget:self action:@selector(signIn) forControlEvents:UIControlEventTouchUpInside];
         
         [self.view addSubview:SignIn];
         
@@ -62,14 +64,35 @@
     return self;
 }
 
--(void)newUser
+-(void)signIn
 {
     PFUser * user = [PFUser currentUser];
     
-    user.username = @"Derek Weber";
-    user.password = @"password";
+    user.username = username.text;
+    user.password = password.text;
     
-    [user saveInBackground];
+    username.text = nil;
+    password.text = nil;
+    
+    // UIActiviyIndicatorView in the login
+    // create a method that begins with start tied to the UIActivityIndicator & add it to subview
+    
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (error == nil)
+        {
+            self.navigationController.navigationBarHidden = NO;
+            
+            self.navigationController.viewControllers = @[[[SLFTableViewController alloc] initWithStyle:UITableViewStylePlain]];
+            
+        } else {
+//            error.userInfo[@error]
+//            UIAlertView with message
+            
+            // if activity indicator errors out then removeFromSuperView
+            
+        }
+    }];
 
 }
 

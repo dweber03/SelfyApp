@@ -19,14 +19,37 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    [Parse setApplicationId:@"H1JHLiA7kFRmIWvtbkHDcnA1Caj4UofHxRx6UZAB"
-                  clientKey:@"dKLyXccYHUy1MXNgrdR2Sq5b1fNQoTr4clSXVd3p"];
+//    [Parse setApplicationId:@"H1JHLiA7kFRmIWvtbkHDcnA1Caj4UofHxRx6UZAB"
+//                  clientKey:@"dKLyXccYHUy1MXNgrdR2Sq5b1fNQoTr4clSXVd3p"];
+
+    // my app key
     
+    [Parse setApplicationId:@"nnXrQQRwkFpoHTpPjS5ktm0dtAEGXY2DMjTaBoYA"
+                  clientKey:@"gZDnBd3B9WmhAzVoTtlKYBRGq2PodSWn4dFGMrRp"];
+
     [PFUser enableAutomaticUser];
+    
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:[[SLFViewController alloc]initWithNibName:nil bundle:nil]];
+    
+    PFUser * user = [PFUser currentUser];
+    NSString * username = user.username;
+    
+    if (username == nil) {
+        navController = [[UINavigationController alloc] initWithRootViewController:[[SLFViewController alloc]initWithNibName:nil bundle:nil]];
+        navController.navigationBarHidden = YES;
+        
+    } else {
+        navController = [[UINavigationController alloc] initWithRootViewController:[[SLFTableViewController alloc]initWithStyle:(UITableViewStylePlain)]];
+        
+    }
+    
+    
+    self.window.rootViewController = navController;
+    
     
 //    self.window.rootViewController = [[SLFTableViewController alloc] initWithStyle:UITableViewStylePlain];
 //    self.window.rootViewController = [[SLFViewController alloc] initWithNibName:nil bundle:nil];
-    self.window.rootViewController = [[SLFSelfyViewController alloc] initWithNibName:nil bundle:nil];
+//    self.window.rootViewController = [[SLFSelfyViewController alloc] initWithNibName:nil bundle:nil];
     
     
     self.window.backgroundColor = [UIColor whiteColor];
