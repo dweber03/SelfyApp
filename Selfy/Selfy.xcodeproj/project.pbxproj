@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		667A0B661905B58B00DDA351 /* addnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 667A0B651905B58B00DDA351 /* addnew.png */; };
+		667A0B681906B89700DDA351 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B671906B89700DDA351 /* Parse.framework */; };
+		667A0B6A1906BD2800DDA351 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B691906BD2800DDA351 /* AudioToolbox.framework */; };
+		667A0B6C1906BD3200DDA351 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B6B1906BD3200DDA351 /* CFNetwork.framework */; };
+		667A0B6E1906BD3C00DDA351 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B6D1906BD3C00DDA351 /* CoreLocation.framework */; };
+		667A0B701906BD5B00DDA351 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B6F1906BD5B00DDA351 /* libz.1.1.3.dylib */; };
+		667A0B751906BD8000DDA351 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B711906BD8000DDA351 /* MobileCoreServices.framework */; };
+		667A0B761906BD8000DDA351 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B721906BD8000DDA351 /* QuartzCore.framework */; };
+		667A0B771906BD8000DDA351 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B731906BD8000DDA351 /* Security.framework */; };
+		667A0B781906BD8000DDA351 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B741906BD8000DDA351 /* SystemConfiguration.framework */; };
+		667A0B7A1906BDA900DDA351 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B791906BDA900DDA351 /* StoreKit.framework */; };
+		667A0B7D1906D41900DDA351 /* SLFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667A0B7C1906D41900DDA351 /* SLFViewController.m */; };
+		667A0B801906E4C500DDA351 /* SLFSelfyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667A0B7F1906E4C500DDA351 /* SLFSelfyViewController.m */; };
+		66FD7E4E1905884C0069AFDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E4D1905884C0069AFDA /* Foundation.framework */; };
+		66FD7E501905884C0069AFDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E4F1905884C0069AFDA /* CoreGraphics.framework */; };
+		66FD7E521905884C0069AFDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E511905884C0069AFDA /* UIKit.framework */; };
+		66FD7E581905884C0069AFDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FD7E561905884C0069AFDA /* InfoPlist.strings */; };
+		66FD7E5A1905884C0069AFDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FD7E591905884C0069AFDA /* main.m */; };
+		66FD7E5E1905884C0069AFDA /* SLFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FD7E5D1905884C0069AFDA /* SLFAppDelegate.m */; };
+		66FD7E601905884C0069AFDA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66FD7E5F1905884C0069AFDA /* Images.xcassets */; };
+		66FD7E671905884C0069AFDA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E661905884C0069AFDA /* XCTest.framework */; };
+		66FD7E681905884C0069AFDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E4D1905884C0069AFDA /* Foundation.framework */; };
+		66FD7E691905884C0069AFDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E511905884C0069AFDA /* UIKit.framework */; };
+		66FD7E711905884C0069AFDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FD7E6F1905884C0069AFDA /* InfoPlist.strings */; };
+		66FD7E731905884C0069AFDA /* SelfyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FD7E721905884C0069AFDA /* SelfyTests.m */; };
+		66FD7E7E190588BB0069AFDA /* SLFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FD7E7D190588BB0069AFDA /* SLFTableViewController.m */; };
+		66FD7E811905A8B30069AFDA /* SLFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FD7E801905A8B30069AFDA /* SLFTableViewCell.m */; };
+		66FD7E831905B1F80069AFDA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 66FD7E821905B1F80069AFDA /* settings.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66FD7E6A1905884C0069AFDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66FD7E421905884C0069AFDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66FD7E491905884C0069AFDA;
+			remoteInfo = Selfy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		667A0B651905B58B00DDA351 /* addnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addnew.png; path = ../addnew.png; sourceTree = "<group>"; };
+		667A0B671906B89700DDA351 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		667A0B691906BD2800DDA351 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		667A0B6B1906BD3200DDA351 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		667A0B6D1906BD3C00DDA351 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		667A0B6F1906BD5B00DDA351 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		667A0B711906BD8000DDA351 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		667A0B721906BD8000DDA351 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		667A0B731906BD8000DDA351 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		667A0B741906BD8000DDA351 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		667A0B791906BDA900DDA351 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		667A0B7B1906D41900DDA351 /* SLFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLFViewController.h; path = Selfy/SLFViewController.h; sourceTree = "<group>"; };
+		667A0B7C1906D41900DDA351 /* SLFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLFViewController.m; path = Selfy/SLFViewController.m; sourceTree = "<group>"; };
+		667A0B7E1906E4C500DDA351 /* SLFSelfyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFSelfyViewController.h; sourceTree = "<group>"; };
+		667A0B7F1906E4C500DDA351 /* SLFSelfyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFSelfyViewController.m; sourceTree = "<group>"; };
+		66FD7E4A1905884C0069AFDA /* Selfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66FD7E4D1905884C0069AFDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		66FD7E4F1905884C0069AFDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		66FD7E511905884C0069AFDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		66FD7E551905884C0069AFDA /* Selfy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Selfy-Info.plist"; sourceTree = "<group>"; };
+		66FD7E571905884C0069AFDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66FD7E591905884C0069AFDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66FD7E5B1905884C0069AFDA /* Selfy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Selfy-Prefix.pch"; sourceTree = "<group>"; };
+		66FD7E5C1905884C0069AFDA /* SLFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFAppDelegate.h; sourceTree = "<group>"; };
+		66FD7E5D1905884C0069AFDA /* SLFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLFAppDelegate.m; sourceTree = "<group>"; };
+		66FD7E5F1905884C0069AFDA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		66FD7E651905884C0069AFDA /* SelfyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66FD7E661905884C0069AFDA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		66FD7E6E1905884C0069AFDA /* SelfyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfyTests-Info.plist"; sourceTree = "<group>"; };
+		66FD7E701905884C0069AFDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66FD7E721905884C0069AFDA /* SelfyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfyTests.m; sourceTree = "<group>"; };
+		66FD7E7C190588BB0069AFDA /* SLFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFTableViewController.h; sourceTree = "<group>"; };
+		66FD7E7D190588BB0069AFDA /* SLFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFTableViewController.m; sourceTree = "<group>"; };
+		66FD7E7F1905A8B30069AFDA /* SLFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFTableViewCell.h; sourceTree = "<group>"; };
+		66FD7E801905A8B30069AFDA /* SLFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFTableViewCell.m; sourceTree = "<group>"; };
+		66FD7E821905B1F80069AFDA /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = ../settings.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66FD7E471905884C0069AFDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667A0B7A1906BDA900DDA351 /* StoreKit.framework in Frameworks */,
+				667A0B751906BD8000DDA351 /* MobileCoreServices.framework in Frameworks */,
+				667A0B761906BD8000DDA351 /* QuartzCore.framework in Frameworks */,
+				667A0B771906BD8000DDA351 /* Security.framework in Frameworks */,
+				667A0B781906BD8000DDA351 /* SystemConfiguration.framework in Frameworks */,
+				667A0B701906BD5B00DDA351 /* libz.1.1.3.dylib in Frameworks */,
+				667A0B6E1906BD3C00DDA351 /* CoreLocation.framework in Frameworks */,
+				667A0B6C1906BD3200DDA351 /* CFNetwork.framework in Frameworks */,
+				667A0B6A1906BD2800DDA351 /* AudioToolbox.framework in Frameworks */,
+				66FD7E501905884C0069AFDA /* CoreGraphics.framework in Frameworks */,
+				66FD7E521905884C0069AFDA /* UIKit.framework in Frameworks */,
+				667A0B681906B89700DDA351 /* Parse.framework in Frameworks */,
+				66FD7E4E1905884C0069AFDA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66FD7E621905884C0069AFDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FD7E671905884C0069AFDA /* XCTest.framework in Frameworks */,
+				66FD7E691905884C0069AFDA /* UIKit.framework in Frameworks */,
+				66FD7E681905884C0069AFDA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66FD7E411905884C0069AFDA = {
+			isa = PBXGroup;
+			children = (
+				66FD7E7C190588BB0069AFDA /* SLFTableViewController.h */,
+				66FD7E7D190588BB0069AFDA /* SLFTableViewController.m */,
+				667A0B7B1906D41900DDA351 /* SLFViewController.h */,
+				667A0B7C1906D41900DDA351 /* SLFViewController.m */,
+				667A0B7E1906E4C500DDA351 /* SLFSelfyViewController.h */,
+				667A0B7F1906E4C500DDA351 /* SLFSelfyViewController.m */,
+				66FD7E7F1905A8B30069AFDA /* SLFTableViewCell.h */,
+				66FD7E801905A8B30069AFDA /* SLFTableViewCell.m */,
+				66FD7E531905884C0069AFDA /* Selfy */,
+				66FD7E6C1905884C0069AFDA /* SelfyTests */,
+				66FD7E4C1905884C0069AFDA /* Frameworks */,
+				66FD7E4B1905884C0069AFDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66FD7E4B1905884C0069AFDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66FD7E4A1905884C0069AFDA /* Selfy.app */,
+				66FD7E651905884C0069AFDA /* SelfyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66FD7E4C1905884C0069AFDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				667A0B791906BDA900DDA351 /* StoreKit.framework */,
+				667A0B711906BD8000DDA351 /* MobileCoreServices.framework */,
+				667A0B721906BD8000DDA351 /* QuartzCore.framework */,
+				667A0B731906BD8000DDA351 /* Security.framework */,
+				667A0B741906BD8000DDA351 /* SystemConfiguration.framework */,
+				667A0B6F1906BD5B00DDA351 /* libz.1.1.3.dylib */,
+				667A0B6D1906BD3C00DDA351 /* CoreLocation.framework */,
+				667A0B6B1906BD3200DDA351 /* CFNetwork.framework */,
+				667A0B691906BD2800DDA351 /* AudioToolbox.framework */,
+				667A0B671906B89700DDA351 /* Parse.framework */,
+				66FD7E4D1905884C0069AFDA /* Foundation.framework */,
+				66FD7E4F1905884C0069AFDA /* CoreGraphics.framework */,
+				66FD7E511905884C0069AFDA /* UIKit.framework */,
+				66FD7E661905884C0069AFDA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66FD7E531905884C0069AFDA /* Selfy */ = {
+			isa = PBXGroup;
+			children = (
+				667A0B651905B58B00DDA351 /* addnew.png */,
+				66FD7E821905B1F80069AFDA /* settings.png */,
+				66FD7E5C1905884C0069AFDA /* SLFAppDelegate.h */,
+				66FD7E5D1905884C0069AFDA /* SLFAppDelegate.m */,
+				66FD7E5F1905884C0069AFDA /* Images.xcassets */,
+				66FD7E541905884C0069AFDA /* Supporting Files */,
+			);
+			path = Selfy;
+			sourceTree = "<group>";
+		};
+		66FD7E541905884C0069AFDA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66FD7E551905884C0069AFDA /* Selfy-Info.plist */,
+				66FD7E561905884C0069AFDA /* InfoPlist.strings */,
+				66FD7E591905884C0069AFDA /* main.m */,
+				66FD7E5B1905884C0069AFDA /* Selfy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66FD7E6C1905884C0069AFDA /* SelfyTests */ = {
+			isa = PBXGroup;
+			children = (
+				66FD7E721905884C0069AFDA /* SelfyTests.m */,
+				66FD7E6D1905884C0069AFDA /* Supporting Files */,
+			);
+			path = SelfyTests;
+			sourceTree = "<group>";
+		};
+		66FD7E6D1905884C0069AFDA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66FD7E6E1905884C0069AFDA /* SelfyTests-Info.plist */,
+				66FD7E6F1905884C0069AFDA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66FD7E491905884C0069AFDA /* Selfy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66FD7E761905884C0069AFDA /* Build configuration list for PBXNativeTarget "Selfy" */;
+			buildPhases = (
+				66FD7E461905884C0069AFDA /* Sources */,
+				66FD7E471905884C0069AFDA /* Frameworks */,
+				66FD7E481905884C0069AFDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Selfy;
+			productName = Selfy;
+			productReference = 66FD7E4A1905884C0069AFDA /* Selfy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66FD7E641905884C0069AFDA /* SelfyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66FD7E791905884C0069AFDA /* Build configuration list for PBXNativeTarget "SelfyTests" */;
+			buildPhases = (
+				66FD7E611905884C0069AFDA /* Sources */,
+				66FD7E621905884C0069AFDA /* Frameworks */,
+				66FD7E631905884C0069AFDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66FD7E6B1905884C0069AFDA /* PBXTargetDependency */,
+			);
+			name = SelfyTests;
+			productName = SelfyTests;
+			productReference = 66FD7E651905884C0069AFDA /* SelfyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66FD7E421905884C0069AFDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SLF;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Derek Weber";
+				TargetAttributes = {
+					66FD7E641905884C0069AFDA = {
+						TestTargetID = 66FD7E491905884C0069AFDA;
+					};
+				};
+			};
+			buildConfigurationList = 66FD7E451905884C0069AFDA /* Build configuration list for PBXProject "Selfy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 66FD7E411905884C0069AFDA;
+			productRefGroup = 66FD7E4B1905884C0069AFDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66FD7E491905884C0069AFDA /* Selfy */,
+				66FD7E641905884C0069AFDA /* SelfyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66FD7E481905884C0069AFDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667A0B661905B58B00DDA351 /* addnew.png in Resources */,
+				66FD7E831905B1F80069AFDA /* settings.png in Resources */,
+				66FD7E581905884C0069AFDA /* InfoPlist.strings in Resources */,
+				66FD7E601905884C0069AFDA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66FD7E631905884C0069AFDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FD7E711905884C0069AFDA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66FD7E461905884C0069AFDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667A0B7D1906D41900DDA351 /* SLFViewController.m in Sources */,
+				66FD7E5E1905884C0069AFDA /* SLFAppDelegate.m in Sources */,
+				66FD7E811905A8B30069AFDA /* SLFTableViewCell.m in Sources */,
+				66FD7E5A1905884C0069AFDA /* main.m in Sources */,
+				667A0B801906E4C500DDA351 /* SLFSelfyViewController.m in Sources */,
+				66FD7E7E190588BB0069AFDA /* SLFTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66FD7E611905884C0069AFDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FD7E731905884C0069AFDA /* SelfyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66FD7E6B1905884C0069AFDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66FD7E491905884C0069AFDA /* Selfy */;
+			targetProxy = 66FD7E6A1905884C0069AFDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66FD7E561905884C0069AFDA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66FD7E571905884C0069AFDA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		66FD7E6F1905884C0069AFDA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66FD7E701905884C0069AFDA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66FD7E741905884C0069AFDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		66FD7E751905884C0069AFDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66FD7E771905884C0069AFDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Selfy/Selfy-Prefix.pch";
+				INFOPLIST_FILE = "Selfy/Selfy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		66FD7E781905884C0069AFDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Selfy/Selfy-Prefix.pch";
+				INFOPLIST_FILE = "Selfy/Selfy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		66FD7E7A1905884C0069AFDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Selfy.app/Selfy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Selfy/Selfy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SelfyTests/SelfyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		66FD7E7B1905884C0069AFDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Selfy.app/Selfy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Selfy/Selfy-Prefix.pch";
+				INFOPLIST_FILE = "SelfyTests/SelfyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66FD7E451905884C0069AFDA /* Build configuration list for PBXProject "Selfy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FD7E741905884C0069AFDA /* Debug */,
+				66FD7E751905884C0069AFDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66FD7E761905884C0069AFDA /* Build configuration list for PBXNativeTarget "Selfy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FD7E771905884C0069AFDA /* Debug */,
+				66FD7E781905884C0069AFDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66FD7E791905884C0069AFDA /* Build configuration list for PBXNativeTarget "SelfyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FD7E7A1905884C0069AFDA /* Debug */,
+				66FD7E7B1905884C0069AFDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66FD7E421905884C0069AFDA /* Project object */;
+}
