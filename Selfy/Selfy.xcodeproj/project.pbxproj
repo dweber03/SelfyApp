@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6669C45719098AC300A8B2D6 /* SLFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6669C45619098AC300A8B2D6 /* SLFNavController.m */; };
 		667A0B661905B58B00DDA351 /* addnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 667A0B651905B58B00DDA351 /* addnew.png */; };
 		667A0B681906B89700DDA351 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B671906B89700DDA351 /* Parse.framework */; };
 		667A0B6A1906BD2800DDA351 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B691906BD2800DDA351 /* AudioToolbox.framework */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6669C45519098AC300A8B2D6 /* SLFNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFNavController.h; sourceTree = "<group>"; };
+		6669C45619098AC300A8B2D6 /* SLFNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFNavController.m; sourceTree = "<group>"; };
 		667A0B651905B58B00DDA351 /* addnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addnew.png; path = ../addnew.png; sourceTree = "<group>"; };
 		667A0B671906B89700DDA351 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		667A0B691906BD2800DDA351 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -129,6 +132,8 @@
 				667A0B7C1906D41900DDA351 /* SLFViewController.m */,
 				667A0B7E1906E4C500DDA351 /* SLFSelfyViewController.h */,
 				667A0B7F1906E4C500DDA351 /* SLFSelfyViewController.m */,
+				6669C45519098AC300A8B2D6 /* SLFNavController.h */,
+				6669C45619098AC300A8B2D6 /* SLFNavController.m */,
 				66FD7E7F1905A8B30069AFDA /* SLFTableViewCell.h */,
 				66FD7E801905A8B30069AFDA /* SLFTableViewCell.m */,
 				66FD7E531905884C0069AFDA /* Selfy */,
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				667A0B7D1906D41900DDA351 /* SLFViewController.m in Sources */,
+				6669C45719098AC300A8B2D6 /* SLFNavController.m in Sources */,
 				66FD7E5E1905884C0069AFDA /* SLFAppDelegate.m in Sources */,
 				66FD7E811905A8B30069AFDA /* SLFTableViewCell.m in Sources */,
 				66FD7E5A1905884C0069AFDA /* main.m in Sources */,

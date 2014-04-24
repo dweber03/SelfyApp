@@ -68,7 +68,7 @@
         
         submit.backgroundColor = [UIColor blueColor];
         submit.layer.cornerRadius = 6;
-        [submit addTarget:self action:@selector(newSelfy) forControlEvents:UIControlEventTouchUpInside];
+//        [submit addTarget:self action:@selector(newSelfy) forControlEvents:UIControlEventTouchUpInside];
     
         
         [newForm addSubview:submit];

@@ -15,29 +15,31 @@
 
 @end
 
-@implementation SLFTableViewController
+@implementation SLFTableViewController 
 
+//{
+//    NSMutableArray * selfies;
 {
-    NSMutableArray * selfies;
     UIButton * settingsButton;
     UIButton * addNewButton;
-    
 }
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self)
     {
-        selfies = [@[
+        self.selfies = [@[
         
-                     @{
-                        @"image" : @"https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/036/354/393842f.jpg",
-                        @"caption" : @"This is a selfy!",
-                        @"user_id" : @"3n2mb23bnm",
-                        @"avatar" : @"file:///Users/derekweber/Downloads/10004061_10101874624304688_748631190_n.jpg",
-                        @"selfy_id" : @"hjk2132bn1"
-                        
-                        }]
+//                     @{
+//                        @"image" : @"https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/036/354/393842f.jpg",
+//                        @"caption" : @"This is a selfy!",
+//                        @"user_id" : @"3n2mb23bnm",
+//                        @"avatar" : @"file:///Users/derekweber/Downloads/10004061_10101874624304688_748631190_n.jpg",
+//                        @"selfy_id" : @"hjk2132bn1"
+//                        
+                        ]
                      mutableCopy];
         
         PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
@@ -77,7 +79,7 @@
     settingsButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
 //    [settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
     settingsButton.backgroundColor = [UIColor blueColor];
-    [settingsButton addTarget:self action:@selector(settingsButton) forControlEvents:UIControlEventTouchUpInside];
+//    [settingsButton addTarget:self action:@selector(settingsButton) forControlEvents:UIControlEventTouchUpInside];
     [settingsButton setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
     
     [headerView addSubview:settingsButton];
@@ -126,7 +128,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [selfies count];
+    return [_selfies count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,12 +139,29 @@
     if (cell == nil) cell = [[SLFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
                               
-    cell.selfyInfo = selfies[indexPath.row];
+    cell.selfyInfo = _selfies[indexPath.row];
                                
     
     return cell;
 }
 
+//-(void)createNewSelfy:(NSString *)selfy
+//{
+//    if ([selfy isEqualToString:@""]) return;
+//    
+//    [self.selfyItems insertObject:@{@"likes":@0,
+//                                    @"text": tweet
+//                                    } atIndex:0];
+//    
+//    [self.tableView reloadData];
+//    
+//}
+//
+//
+//-(BOOL)isSelfiesItemsEmpty
+//{
+//    return ([self.selfyItems count] == 0);
+//}
 
 /*
 // Override to support conditional editing of the table view.

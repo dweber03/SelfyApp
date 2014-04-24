@@ -32,9 +32,9 @@
         username.textColor = [UIColor blackColor];
         username.backgroundColor = [UIColor darkGrayColor];
         username.layer.cornerRadius = 6;
-        username.delegate = self;
+//        username.delegate = self;
         
-        [self.view addSubview:username];
+        
         
         password = [[UITextField alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 180, 160, 30)];
         password.placeholder = @"Password";
@@ -42,7 +42,7 @@
         password.textColor = [UIColor blackColor];
         password.backgroundColor = [UIColor darkGrayColor];
         password.layer.cornerRadius = 6;
-        password.delegate = self;
+//        password.delegate = self;
         
         [self.view addSubview:password];
         
@@ -93,6 +93,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+//
 
 /*
  #pragma mark - Navigation

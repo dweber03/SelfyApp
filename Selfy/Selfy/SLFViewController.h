@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLFViewController : UIViewController <UITextFieldDelegate>
+@interface SLFViewController : UIViewController 
 
 
 @end

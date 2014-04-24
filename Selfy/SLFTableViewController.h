@@ -10,4 +10,11 @@
 
 @interface SLFTableViewController : UITableViewController
 
+@property (nonatomic) NSMutableArray * selfies;
+
+//@property (nonatomic, getter = isSelfyItemsEmpty,readonly) BOOL selfyItemsEmpty;
+
+//-(void)createNewSelfy:(NSString *)selfy;
+
+
 @end

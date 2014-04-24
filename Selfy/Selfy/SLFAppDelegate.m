@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import "SLFViewController.h"
 #import "SLFSelfyViewController.h"
+#import "SLFNavController.h"
 
 
 @implementation SLFAppDelegate
@@ -26,8 +27,20 @@
     
 //    self.window.rootViewController = [[SLFTableViewController alloc] initWithStyle:UITableViewStylePlain];
 //    self.window.rootViewController = [[SLFViewController alloc] initWithNibName:nil bundle:nil];
-    self.window.rootViewController = [[SLFSelfyViewController alloc] initWithNibName:nil bundle:nil];
+//    self.window.rootViewController = [[SLFSelfyViewController alloc] initWithNibName:nil bundle:nil];
     
+    SLFNavController * lc = [[SLFNavController alloc]init];
+    
+    
+    self.window.rootViewController = lc;
+    
+    [lc addViewController:[[SLFViewController alloc] init]];
+    
+    //    self.window.rootViewController = [TLANavController];
+    
+    
+    
+
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
