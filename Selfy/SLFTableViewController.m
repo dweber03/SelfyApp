@@ -9,6 +9,7 @@
 #import "SLFTableViewController.h"
 #import "SLFTableViewCell.h"
 #import <Parse/Parse.h> 
+#import "SLFSelfyViewController.h"
 
 
 @interface SLFTableViewController ()
@@ -115,10 +116,20 @@
     UIBarButtonItem * addNewSelfyButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(openNewSelfy)];
     
     self.navigationItem.rightBarButtonItem = addNewSelfyButton;
+    
+
+    
+    
+    
+    
+    
+    
 }
 
 -(void)openNewSelfy
 {
+    SLFSelfyViewController * openNewSelfy = [[SLFSelfyViewController alloc] init];
+    [self presentModalViewController:openNewSelfy animated:YES];
     
 }
 
