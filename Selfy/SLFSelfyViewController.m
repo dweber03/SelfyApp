@@ -7,6 +7,7 @@
 //
 
 #import "SLFSelfyViewController.h"
+#import <Parse/Parse.h>
 
 @interface SLFSelfyViewController ()
 
@@ -17,7 +18,7 @@
     UIButton * submit;
     UIButton * cancel;
     UITextView * caption;
-    UIImageView * newSelfy;
+//    UIImageView * newSelfy;
     UIView * newForm;
     
 }
@@ -43,7 +44,7 @@
         
         [newForm addSubview:caption];
         
-        newSelfy = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 170, 160, 110)];
+        UIImageView * newSelfy = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 170, 160, 110)];
         newSelfy.backgroundColor = [UIColor lightGrayColor];
         [newSelfy.layer setBorderColor: [[UIColor darkGrayColor] CGColor]];
         [newSelfy.layer setBorderWidth: 2.0];
@@ -51,7 +52,7 @@
         [newForm addSubview:newSelfy];
         
         
-        cancel = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 340, 160, 30)];
+        cancel = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 290, 160, 30)];
         [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
         cancel.titleLabel.font = [UIFont systemFontOfSize:12];
         
@@ -62,7 +63,7 @@
         [newForm addSubview:cancel];
         
         
-        submit = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 390, 160, 30)];
+        submit = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 330, 160, 30)];
         [submit setTitle:@"newSelfy" forState:UIControlStateNormal];
         submit.titleLabel.font = [UIFont systemFontOfSize:12];
         
@@ -93,18 +94,25 @@
 
 -(void)newSelfy
 {
-    PFObject * testObject = [PFObject objectWithClassName:@"newSelfy"];
-    newSelfy [@"foo"] = @"bar";
+//    PFObject * testObject = [PFObject objectWithClassName:@"newSelfy"];
+//    newSelfy [@"foo"] = @"bar";
+//    [newSelfy saveInBackground];
+//    
+//    
+//     PFObject "UserSelfy"
+//     put a png file inside app
+//     research PFFile
+    
+    UIImage * image = [UIImage imageNamed:@"heart"];
+    NSData * imageData = UIImagePNGRepresentation(image);
+    PFFile * imageFile = [PFFile fileWithName:@"heart.png" data:imageData];
+    PFObject * newSelfy = [PFObject objectWithClassName:@"UserSelfy"];
+    newSelfy[@"caption"] = caption.text;
+    newSelfy[@"image"] = imageFile;
     [newSelfy saveInBackground];
     
     
-    // PFObject "UserSelfy"
-    // put a png file inside app
-    // research PFFile
     
-    //
-    
-
 }
 - (BOOL)textViewShouldReturn:(UITextView *)textView;
 {

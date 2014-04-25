@@ -62,33 +62,33 @@
     
    
     
-    UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 60)];
-    headerView.backgroundColor = [UIColor darkGrayColor];
-    self.tableView.tableHeaderView = headerView;
+//    UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 60)];
+//    headerView.backgroundColor = [UIColor darkGrayColor];
+//    self.tableView.tableHeaderView = headerView;
     
     
-    UILabel * appTitle = [[UILabel alloc] initWithFrame:CGRectMake(60, 0, self.tableView.frame.size.width - 120, 60)];
-    appTitle.text = @"Selfy";
-    appTitle.textAlignment = NSTextAlignmentCenter;
+//    UILabel * appTitle = [[UILabel alloc] initWithFrame:CGRectMake(60, 0, self.tableView.frame.size.width - 120, 60)];
+//    appTitle.text = @"Selfy";
+//    appTitle.textAlignment = NSTextAlignmentCenter;
+//    
+//    appTitle.backgroundColor = [UIColor darkGrayColor];
+//    [self.view addSubview:appTitle];
     
-    appTitle.backgroundColor = [UIColor darkGrayColor];
-    [headerView addSubview:appTitle];
-    
-    settingsButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
-//    [settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
-    settingsButton.backgroundColor = [UIColor blueColor];
-    [settingsButton addTarget:self action:@selector(settingsButton) forControlEvents:UIControlEventTouchUpInside];
-    [settingsButton setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
-    
-    [headerView addSubview:settingsButton];
-    
-    addNewButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 0, 60, 60)];
-    //    [settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
-    addNewButton.backgroundColor = [UIColor blueColor];
-    [addNewButton addTarget:self action:@selector(new) forControlEvents:UIControlEventTouchUpInside];
-    [addNewButton setImage:[UIImage imageNamed:@"addnew"] forState:UIControlStateNormal];
-    
-    [headerView addSubview: addNewButton];
+//    settingsButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+////    [settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
+//    settingsButton.backgroundColor = [UIColor blueColor];
+//    [settingsButton addTarget:self action:@selector(settingsButton) forControlEvents:UIControlEventTouchUpInside];
+//    [settingsButton setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
+//    
+//    [headerView addSubview:settingsButton];
+//    
+//    addNewButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 0, 60, 60)];
+//    //    [settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
+//    addNewButton.backgroundColor = [UIColor blueColor];
+//    [addNewButton addTarget:self action:@selector(new) forControlEvents:UIControlEventTouchUpInside];
+//    [addNewButton setImage:[UIImage imageNamed:@"addnew"] forState:UIControlStateNormal];
+//    
+//    [headerView addSubview: addNewButton];
 
     
     
@@ -110,8 +110,16 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+   
+    UIBarButtonItem * addNewSelfyButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(openNewSelfy)];
+    
+    self.navigationItem.rightBarButtonItem = addNewSelfyButton;
+}
+
+-(void)openNewSelfy
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
