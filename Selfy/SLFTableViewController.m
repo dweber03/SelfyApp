@@ -9,6 +9,7 @@
 #import "SLFTableViewController.h"
 #import "SLFTableViewCell.h"
 #import <Parse/Parse.h> 
+#import "SLFSelfyViewController.h"
 
 
 @interface SLFTableViewController ()
@@ -61,6 +62,8 @@
     [super viewDidLoad];
     
    
+    
+
     
 //    UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 60)];
 //    headerView.backgroundColor = [UIColor darkGrayColor];
@@ -119,7 +122,16 @@
 
 -(void)openNewSelfy
 {
+    SLFSelfyViewController * openNewSelfy = [[SLFSelfyViewController alloc] initWithNibName:nil bundle:nil];
     
+    UINavigationController * nc = [[UINavigationController alloc] initWithRootViewController:openNewSelfy];
+    nc.navigationBar.barTintColor = [UIColor blueColor];
+    nc.navigationBar.translucent = NO;
+    
+       [self.navigationController presentViewController:nc animated:YES completion:^{
+        
+    }];
+                                             
 }
 
 - (void)didReceiveMemoryWarning

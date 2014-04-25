@@ -28,6 +28,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
+        self.view.backgroundColor = [UIColor whiteColor];
         
         newForm = [[UIView alloc] initWithFrame:self.view.frame];
         
@@ -132,7 +133,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UIBarButtonItem * cancelNewSelfyButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelNewSelfy)];
+    
+    cancelNewSelfyButton.tintColor = [UIColor whiteColor];
+    
+    self.navigationItem.rightBarButtonItem = cancelNewSelfyButton;
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+}
+
+-(void)cancelNewSelfy
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -151,5 +164,11 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+    
+}
 
 @end
