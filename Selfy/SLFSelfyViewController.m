@@ -8,6 +8,7 @@
 
 #import "SLFSelfyViewController.h"
 #import <Parse/Parse.h>
+#import "SLFViewController.h"
 
 @interface SLFSelfyViewController ()
 
@@ -18,7 +19,7 @@
     UIButton * submit;
     UIButton * cancel;
     UITextView * caption;
-//    UIImageView * newSelfy;
+    UIImageView * imageView;
     UIView * newForm;
     
 }
@@ -34,8 +35,15 @@
         
         [self.view addSubview:newForm];
         
-        caption = [[UITextView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 40, 160, 110)];
-        caption.textColor = [UIColor blackColor];
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 280, 280)];
+        imageView.image = [UIImage imageNamed:@"boss"];
+        imageView.backgroundColor = [UIColor whiteColor];
+        
+        [newForm addSubview:imageView];
+        
+       
+        caption = [[UITextView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 300, 160, 30)];
+       caption.textColor = [UIColor blackColor];
         caption.backgroundColor = [UIColor lightGrayColor];
         caption.layer.cornerRadius = 6;
         [caption.layer setBorderColor: [[UIColor darkGrayColor] CGColor]];
@@ -44,24 +52,24 @@
         caption.delegate = self;
         
         [newForm addSubview:caption];
+//        
+//        UIImageView * newSelfy = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 170, 160, 110)];
+//        newSelfy.backgroundColor = [UIColor lightGrayColor];
+//        [newSelfy.layer setBorderColor: [[UIColor darkGrayColor] CGColor]];
+//        [newSelfy.layer setBorderWidth: 2.0];
+//
+//        [newForm addSubview:newSelfy];
         
-        UIImageView * newSelfy = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 170, 160, 110)];
-        newSelfy.backgroundColor = [UIColor lightGrayColor];
-        [newSelfy.layer setBorderColor: [[UIColor darkGrayColor] CGColor]];
-        [newSelfy.layer setBorderWidth: 2.0];
-
-        [newForm addSubview:newSelfy];
         
-        
-        cancel = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 290, 160, 30)];
-        [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
-        cancel.titleLabel.font = [UIFont systemFontOfSize:12];
-        
-        cancel.backgroundColor = [UIColor redColor];
-        cancel.layer.cornerRadius = 6;
-        //        [submit addTarget:self action:@selector(newUser) forControlEvents:UIControlEventTouchUpInside];
-        
-        [newForm addSubview:cancel];
+//        cancel = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 290, 160, 30)];
+//        [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
+//        cancel.titleLabel.font = [UIFont systemFontOfSize:12];
+//        
+//        cancel.backgroundColor = [UIColor redColor];
+//        cancel.layer.cornerRadius = 6;
+//        //        [submit addTarget:self action:@selector(newUser) forControlEvents:UIControlEventTouchUpInside];
+//        
+//        [newForm addSubview:cancel];
         
         
         submit = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 330, 160, 30)];
@@ -87,7 +95,7 @@
 {
     [caption resignFirstResponder];
     
-//    [UIView animateWithDuration:0.2 animations:^{ newForm.frame = CGRectMake(0,-KB_HEIGHT, 320, self.view.frame.size.height);}];
+    [UIView animateWithDuration:0.2 animations:^{ newForm.frame = CGRectMake(0,-KB_HEIGHT, 320, self.view.frame.size.height);}];
     newForm.frame = self.view.frame;
     
 
@@ -95,22 +103,23 @@
 
 -(void)newSelfy
 {
-//    PFObject * testObject = [PFObject objectWithClassName:@"newSelfy"];
-//    newSelfy [@"foo"] = @"bar";
-//    [newSelfy saveInBackground];
-//    
-//    
-//     PFObject "UserSelfy"
-//     put a png file inside app
-//     research PFFile
+
+    // connect current user to newSelfy as parent - Parse/Objects/Relational Data documentation to create a Parent
     
-    UIImage * image = [UIImage imageNamed:@"heart"];
-    NSData * imageData = UIImagePNGRepresentation(image);
-    PFFile * imageFile = [PFFile fileWithName:@"heart.png" data:imageData];
+    NSData * imageData = UIImagePNGRepresentation(imageView.image);
+    
+    
+    
+//    UIImage * image = [UIImage imageNamed:@"heart"];
+    PFFile * imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     PFObject * newSelfy = [PFObject objectWithClassName:@"UserSelfy"];
     newSelfy[@"caption"] = caption.text;
     newSelfy[@"image"] = imageFile;
-    [newSelfy saveInBackground];
+    [newSelfy saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"%u", succeeded);
+        [self cancelNewSelfy];
+        
+    }];
     
     
     
@@ -145,7 +154,9 @@
 
 -(void)cancelNewSelfy
 {
-    
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning

@@ -12,7 +12,7 @@
 
 {
     UIImageView * selfyView;
-    UIImageView * avatarView;
+//    UIImageView * avatarView;
     UILabel * selfyCaption;
    
 }
@@ -27,13 +27,13 @@
         selfyView .backgroundColor = [UIColor lightGrayColor];
         
         [self.contentView addSubview:selfyView];
-        
-        avatarView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 280, 280)];
-        avatarView .backgroundColor = [UIColor lightGrayColor];
-        avatarView.layer.cornerRadius = 20;
-        avatarView.layer.masksToBounds = YES;
-        
-        [self.contentView addSubview:avatarView];
+//        
+//        avatarView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 280, 280)];
+//        avatarView .backgroundColor = [UIColor lightGrayColor];
+//        avatarView.layer.cornerRadius = 20;
+//        avatarView.layer.masksToBounds = YES;
+//        
+//        [self.contentView addSubview:avatarView];
         
         selfyCaption = [[UILabel alloc] initWithFrame:CGRectMake(80, 300, 220, 40)];
         selfyCaption.textColor = [UIColor darkGrayColor];
@@ -47,23 +47,38 @@
 
 
 
-- (void)setSelfyInfo:(NSDictionary *)selfyInfo
+- (void)setSelfyInfo:(PFObject *)selfyInfo
 
 {
     _selfyInfo = selfyInfo;
     
-    selfyCaption.text = selfyInfo[@"caption"];
-    NSURL * imageURL = [NSURL URLWithString:selfyInfo[@"image"]];
-    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-    UIImage * image = [UIImage imageWithData:imageData];
+//    selfyCaption.text = selfyInfo[@"caption"];
+    selfyCaption.text = [selfyInfo objectForKey:@"caption"];
     
-    selfyView.image = image;
     
-    NSURL * avatarURL = [NSURL URLWithString:selfyInfo[@"avatar"]];
-    NSData * avatarData = [NSData dataWithContentsOfURL:avatarURL];
-    UIImage * avatar = [UIImage imageWithData:avatarData];
     
-    avatarView.image = avatar;
+//    NSURL * imageURL = [NSURL URLWithString:selfyInfo[@"image"]];
+//    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+//    UIImage * image = [UIImage imageWithData:imageData];
+    
+    PFFile * imageFile = [selfyInfo objectForKey:@"image"];
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        UIImage * image = [UIImage imageWithData:data];
+        selfyView.image = image;
+        
+        
+    } progressBlock:^(int percentDone){
+        
+        //do something
+    }];
+    
+
+    
+//    NSURL * avatarURL = [NSURL URLWithString:selfyInfo[@"avatar"]];
+//    NSData * avatarData = [NSData dataWithContentsOfURL:avatarURL];
+//    UIImage * avatar = [UIImage imageWithData:avatarData];
+//    
+//    avatarView.image = avatar;
     
     }
 
