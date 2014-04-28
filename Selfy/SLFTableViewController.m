@@ -118,15 +118,20 @@
 -(void)refreshSelfies
 {
     PFQuery * query = [PFQuery queryWithClassName:@"UserSelfy"];
-    
+    [query orderByDescending:@"createdAt"];
     // change order by created date : newest first/order ascencion 
     
     
-    // after user connected to selfy : filter only your user's selfies 
+    // after user connected to selfy : filter only your user's selfies
+    
+    
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         selfies = objects;
+        
+        
+        
         
         [self.tableView reloadData];
         
