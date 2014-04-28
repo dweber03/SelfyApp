@@ -113,8 +113,12 @@
 //    UIImage * image = [UIImage imageNamed:@"heart"];
     PFFile * imageFile = [PFFile fileWithName:@"image.png" data:imageData];
     PFObject * newSelfy = [PFObject objectWithClassName:@"UserSelfy"];
+    
+    
     newSelfy[@"caption"] = caption.text;
     newSelfy[@"image"] = imageFile;
+    newSelfy[@"parent"] = [PFUser currentUser];
+    
     [newSelfy saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         NSLog(@"%u", succeeded);
         [self cancelNewSelfy];
