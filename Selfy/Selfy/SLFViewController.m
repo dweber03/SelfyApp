@@ -9,7 +9,8 @@
 #import "SLFViewController.h"
 #import <Parse/Parse.h>
 #import "SLFTableViewController.h"
-#import "SLFSelfyViewController.h" 
+#import "SLFSelfyViewController.h"
+#import "SLFSignUpViewController.h"
 
 @interface SLFViewController ()
 
@@ -18,9 +19,13 @@
 @implementation SLFViewController
 
 {
+    UIView * loginForm;
+    
     UITextField * username;
     UITextField * password;
     UIButton * SignIn;
+    //    UIButton * SignUp;
+    
     
 }
 
@@ -29,6 +34,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
+        
+        loginForm = [[UIView alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:loginForm];
+        
         username = [[UITextField alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 90, 160, 30)];
         username.placeholder = @"New User";
         username.textColor = [UIColor blackColor];
@@ -38,7 +47,7 @@
         username.autocapitalizationType = UITextAutocapitalizationTypeNone;
         username.autocorrectionType = UITextAutocorrectionTypeNo;
         
-        [self.view addSubview:username];
+        [loginForm addSubview:username];
         
         password = [[UITextField alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 150, 160, 30)];
         password.placeholder = @"Password";
@@ -48,7 +57,7 @@
         password.layer.cornerRadius = 6;
         password.delegate = self;
         
-        [self.view addSubview:password];
+        [loginForm addSubview:password];
         
         SignIn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 220, 160, 30)];
         [SignIn setTitle:@"SignIn" forState:UIControlStateNormal];
@@ -58,7 +67,17 @@
         SignIn.layer.cornerRadius = 6;
         [SignIn addTarget:self action:@selector(signIn) forControlEvents:UIControlEventTouchUpInside];
         
-        [self.view addSubview:SignIn];
+        [loginForm addSubview:SignIn];
+        
+        UIButton * SignUp = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 260, 160, 30)];
+        [SignUp setTitle:@"SignUp" forState:UIControlStateNormal];
+        SignUp.titleLabel.font = [UIFont systemFontOfSize:12];
+        
+        SignUp.backgroundColor = [UIColor blueColor];
+        SignUp.layer.cornerRadius = 6;
+        [SignUp addTarget:self action:@selector(signUp) forControlEvents:UIControlEventTouchUpInside];
+        [loginForm addSubview: SignUp];
+        
         
         // remove auto capitalization
         // animate login screen up
@@ -67,15 +86,30 @@
     return self;
 }
 
+-(void)signUp
+{
+    SLFSignUpViewController * signUpVC = [[SLFSignUpViewController alloc] initWithNibName:nil bundle:nil];
+    
+    UINavigationController * nc = [[UINavigationController alloc] initWithRootViewController:signUpVC];
+    nc.navigationBar.barTintColor = [UIColor blueColor];
+    nc.navigationBar.translucent = NO;
+    
+    [self.navigationController presentViewController:nc animated:YES completion:^{
+        
+    }];
+    
+}
+
 -(void)signIn
 {
-    PFUser * user = [PFUser currentUser];
-    
-    user.username = username.text;
-    user.password = password.text;
-    
-    username.text = nil;
-    password.text = nil;
+    //
+    //    PFUser * user = [PFUser currentUser];
+    //
+    //    user.username = username.text;
+    //    user.password = password.text;
+    //
+    //    username.text = nil;
+    //    password.text = nil;
     
     UIActivityIndicatorView * activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:(UIActivityIndicatorViewStyleGray)];
     
@@ -89,11 +123,14 @@
     // UIActiviyIndicatorView in the login
     // create a method that begins with start tied to the UIActivityIndicator & add it to subview
     
-    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [PFUser logInWithUsernameInBackground:username.text password:password.text block:^(PFUser *user, NSError * error) {
+        
+        NSLog(@"logged in %@", user.username);
+        NSLog(@"current user %@", [PFUser currentUser].username);
+        
         
         if (error == nil)
         {
-            [activityIndicator removeFromSuperview];
             
             self.navigationController.navigationBarHidden = NO;
             
@@ -101,26 +138,29 @@
             
         } else {
             
+            password.text = nil;
+            [activityIndicator removeFromSuperview];
+            
             NSString * errorDescription = error.userInfo[@"error"];
             
             UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Login Error" message:errorDescription delegate:self cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
             
             [alertView show];
-//            error.userInfo[@"error"]
-//            UIAlertView with message
+            //            error.userInfo[@"error"]
+            //            UIAlertView with message
             
             // if activity indicator errors out then removeFromSuperView
             
         }
     }];
-
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 {
     [username resignFirstResponder];
     [password resignFirstResponder];
-;
+    ;
     
     return YES;
 }

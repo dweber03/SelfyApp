@@ -33,6 +33,7 @@
     
     PFUser * user = [PFUser currentUser];
     NSString * username = user.username;
+    username = nil;
     
     if (username == nil) {
         navController = [[UINavigationController alloc] initWithRootViewController:[[SLFViewController alloc]initWithNibName:nil bundle:nil]];

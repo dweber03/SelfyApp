@@ -8,21 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6635DDCC190E91B2005F50BC /* boss.png in Resources */ = {isa = PBXBuildFile; fileRef = 6635DDCB190E91B2005F50BC /* boss.png */; };
+		6635DDCF190FDD2B005F50BC /* SLFSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6635DDCE190FDD2B005F50BC /* SLFSignUpViewController.m */; };
 		667A0B661905B58B00DDA351 /* addnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 667A0B651905B58B00DDA351 /* addnew.png */; };
 		667A0B681906B89700DDA351 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B671906B89700DDA351 /* Parse.framework */; };
-		667A0B6A1906BD2800DDA351 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B691906BD2800DDA351 /* AudioToolbox.framework */; };
-		667A0B6C1906BD3200DDA351 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B6B1906BD3200DDA351 /* CFNetwork.framework */; };
-		667A0B6E1906BD3C00DDA351 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B6D1906BD3C00DDA351 /* CoreLocation.framework */; };
-		667A0B701906BD5B00DDA351 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B6F1906BD5B00DDA351 /* libz.1.1.3.dylib */; };
-		667A0B751906BD8000DDA351 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B711906BD8000DDA351 /* MobileCoreServices.framework */; };
-		667A0B761906BD8000DDA351 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B721906BD8000DDA351 /* QuartzCore.framework */; };
-		667A0B771906BD8000DDA351 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B731906BD8000DDA351 /* Security.framework */; };
-		667A0B781906BD8000DDA351 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B741906BD8000DDA351 /* SystemConfiguration.framework */; };
-		667A0B7A1906BDA900DDA351 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B791906BDA900DDA351 /* StoreKit.framework */; };
 		667A0B7D1906D41900DDA351 /* SLFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667A0B7C1906D41900DDA351 /* SLFViewController.m */; };
 		667A0B801906E4C500DDA351 /* SLFSelfyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667A0B7F1906E4C500DDA351 /* SLFSelfyViewController.m */; };
+		66AB4D921910073000E6322E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B741906BD8000DDA351 /* SystemConfiguration.framework */; };
+		66AB4D931910074400E6322E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B711906BD8000DDA351 /* MobileCoreServices.framework */; };
+		66AB4D941910079900E6322E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E4F1905884C0069AFDA /* CoreGraphics.framework */; };
 		66FD7E4E1905884C0069AFDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E4D1905884C0069AFDA /* Foundation.framework */; };
-		66FD7E501905884C0069AFDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E4F1905884C0069AFDA /* CoreGraphics.framework */; };
 		66FD7E521905884C0069AFDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E511905884C0069AFDA /* UIKit.framework */; };
 		66FD7E581905884C0069AFDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FD7E561905884C0069AFDA /* InfoPlist.strings */; };
 		66FD7E5A1905884C0069AFDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FD7E591905884C0069AFDA /* main.m */; };
@@ -50,17 +44,12 @@
 
 /* Begin PBXFileReference section */
 		6635DDCB190E91B2005F50BC /* boss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boss.png; sourceTree = "<group>"; };
+		6635DDCD190FDD2B005F50BC /* SLFSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFSignUpViewController.h; sourceTree = "<group>"; };
+		6635DDCE190FDD2B005F50BC /* SLFSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFSignUpViewController.m; sourceTree = "<group>"; };
 		667A0B651905B58B00DDA351 /* addnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addnew.png; path = ../addnew.png; sourceTree = "<group>"; };
 		667A0B671906B89700DDA351 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		667A0B691906BD2800DDA351 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		667A0B6B1906BD3200DDA351 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		667A0B6D1906BD3C00DDA351 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		667A0B6F1906BD5B00DDA351 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		667A0B711906BD8000DDA351 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		667A0B721906BD8000DDA351 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		667A0B731906BD8000DDA351 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		667A0B741906BD8000DDA351 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		667A0B791906BDA900DDA351 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		667A0B7B1906D41900DDA351 /* SLFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLFViewController.h; path = Selfy/SLFViewController.h; sourceTree = "<group>"; };
 		667A0B7C1906D41900DDA351 /* SLFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLFViewController.m; path = Selfy/SLFViewController.m; sourceTree = "<group>"; };
 		667A0B7E1906E4C500DDA351 /* SLFSelfyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFSelfyViewController.h; sourceTree = "<group>"; };
@@ -93,16 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				667A0B7A1906BDA900DDA351 /* StoreKit.framework in Frameworks */,
-				667A0B751906BD8000DDA351 /* MobileCoreServices.framework in Frameworks */,
-				667A0B761906BD8000DDA351 /* QuartzCore.framework in Frameworks */,
-				667A0B771906BD8000DDA351 /* Security.framework in Frameworks */,
-				667A0B781906BD8000DDA351 /* SystemConfiguration.framework in Frameworks */,
-				667A0B701906BD5B00DDA351 /* libz.1.1.3.dylib in Frameworks */,
-				667A0B6E1906BD3C00DDA351 /* CoreLocation.framework in Frameworks */,
-				667A0B6C1906BD3200DDA351 /* CFNetwork.framework in Frameworks */,
-				667A0B6A1906BD2800DDA351 /* AudioToolbox.framework in Frameworks */,
-				66FD7E501905884C0069AFDA /* CoreGraphics.framework in Frameworks */,
+				66AB4D941910079900E6322E /* CoreGraphics.framework in Frameworks */,
+				66AB4D931910074400E6322E /* MobileCoreServices.framework in Frameworks */,
+				66AB4D921910073000E6322E /* SystemConfiguration.framework in Frameworks */,
 				66FD7E521905884C0069AFDA /* UIKit.framework in Frameworks */,
 				667A0B681906B89700DDA351 /* Parse.framework in Frameworks */,
 				66FD7E4E1905884C0069AFDA /* Foundation.framework in Frameworks */,
@@ -130,6 +112,8 @@
 				66FD7E7D190588BB0069AFDA /* SLFTableViewController.m */,
 				667A0B7B1906D41900DDA351 /* SLFViewController.h */,
 				667A0B7C1906D41900DDA351 /* SLFViewController.m */,
+				6635DDCD190FDD2B005F50BC /* SLFSignUpViewController.h */,
+				6635DDCE190FDD2B005F50BC /* SLFSignUpViewController.m */,
 				667A0B7E1906E4C500DDA351 /* SLFSelfyViewController.h */,
 				667A0B7F1906E4C500DDA351 /* SLFSelfyViewController.m */,
 				66FD7E7F1905A8B30069AFDA /* SLFTableViewCell.h */,
@@ -153,15 +137,8 @@
 		66FD7E4C1905884C0069AFDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				667A0B791906BDA900DDA351 /* StoreKit.framework */,
 				667A0B711906BD8000DDA351 /* MobileCoreServices.framework */,
-				667A0B721906BD8000DDA351 /* QuartzCore.framework */,
-				667A0B731906BD8000DDA351 /* Security.framework */,
 				667A0B741906BD8000DDA351 /* SystemConfiguration.framework */,
-				667A0B6F1906BD5B00DDA351 /* libz.1.1.3.dylib */,
-				667A0B6D1906BD3C00DDA351 /* CoreLocation.framework */,
-				667A0B6B1906BD3200DDA351 /* CFNetwork.framework */,
-				667A0B691906BD2800DDA351 /* AudioToolbox.framework */,
 				667A0B671906B89700DDA351 /* Parse.framework */,
 				66FD7E4D1905884C0069AFDA /* Foundation.framework */,
 				66FD7E4F1905884C0069AFDA /* CoreGraphics.framework */,
@@ -314,6 +291,7 @@
 			files = (
 				667A0B7D1906D41900DDA351 /* SLFViewController.m in Sources */,
 				66FD7E5E1905884C0069AFDA /* SLFAppDelegate.m in Sources */,
+				6635DDCF190FDD2B005F50BC /* SLFSignUpViewController.m in Sources */,
 				66FD7E811905A8B30069AFDA /* SLFTableViewCell.m in Sources */,
 				66FD7E5A1905884C0069AFDA /* main.m in Sources */,
 				667A0B801906E4C500DDA351 /* SLFSelfyViewController.m in Sources */,
