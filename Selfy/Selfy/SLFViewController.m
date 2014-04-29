@@ -20,6 +20,11 @@
 {
     UITextField * username;
     UITextField * password;
+    UITextField * email;
+    UITextField * displayname;
+    UIView * loginForm;
+    
+    UIButton * signUp;
     UIButton * SignIn;
     
 }
@@ -29,6 +34,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
+        
+        loginForm = [[UIView alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:loginForm];
+        
         username = [[UITextField alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 90, 160, 30)];
         username.placeholder = @"New User";
         username.textColor = [UIColor blackColor];
@@ -38,7 +47,7 @@
         username.autocapitalizationType = UITextAutocapitalizationTypeNone;
         username.autocorrectionType = UITextAutocorrectionTypeNo;
         
-        [self.view addSubview:username];
+        [loginForm addSubview:username];
         
         password = [[UITextField alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 150, 160, 30)];
         password.placeholder = @"Password";
@@ -48,7 +57,7 @@
         password.layer.cornerRadius = 6;
         password.delegate = self;
         
-        [self.view addSubview:password];
+        [loginForm addSubview:password];
         
         SignIn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 80, 220, 160, 30)];
         [SignIn setTitle:@"SignIn" forState:UIControlStateNormal];
@@ -60,12 +69,22 @@
         
         [self.view addSubview:SignIn];
         
+        signUp = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2-80, 270, 160, 30)];
+        [signUp setTitle:@"SignUp" forState:UIControlStateNormal];
+        signUp.backgroundColor = [UIColor greenColor];
+        signUp.layer.cornerRadius = 6;
+        [signUp addTarget:self action:@selector(signUp) forControlEvents:UIControlEventTouchUpInside];
+        
+        [loginForm addSubview:signUp];
+        
+        
         // remove auto capitalization
         // animate login screen up
         
     }
     return self;
 }
+
 
 -(void)signIn
 {
@@ -114,6 +133,37 @@
         }
     }];
 
+}
+
+- (void)signUp
+
+{
+    
+    PFUser * user = [PFUser user];
+    user.username = @"createusername";
+    user.password = @"create password";
+    user.email = @"email";
+//    user.displayname = @"create userid";
+    
+    UIActivityIndicatorView * activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:(UIActivityIndicatorViewStyleGray)];
+    
+    activityIndicator.color = [UIColor redColor];
+    activityIndicator.frame = CGRectMake(0, 150, 160, 30);
+    [signUp addSubview:activityIndicator];
+    [activityIndicator startAnimating];
+    
+    
+//    
+//    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!error) {
+//            
+//        } else {
+//            NSString * errorDescription = [error userInfo][@"not available"];
+//            
+//            
+//            
+//        }
+//    }];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;

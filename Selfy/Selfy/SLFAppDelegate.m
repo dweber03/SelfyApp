@@ -31,6 +31,9 @@
     
     UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:[[SLFViewController alloc]initWithNibName:nil bundle:nil]];
     
+  
+    
+    
     PFUser * user = [PFUser currentUser];
     NSString * username = user.username;
     
@@ -44,11 +47,11 @@
     }
     
     
-    self.window.rootViewController = navController;
+//    self.window.rootViewController = navController;
     
     
 //    self.window.rootViewController = [[SLFTableViewController alloc] initWithStyle:UITableViewStylePlain];
-//    self.window.rootViewController = [[SLFViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = [[SLFViewController alloc] initWithNibName:nil bundle:nil];
 //    self.window.rootViewController = [[SLFSelfyViewController alloc] initWithNibName:nil bundle:nil];
     
     
