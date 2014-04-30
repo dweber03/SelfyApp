@@ -10,6 +10,8 @@
 #import "SLFTableViewCell.h"
 #import <Parse/Parse.h>
 #import "SLFSelfyViewController.h"
+#import "SLFSettingsButton.h"
+#import "SLFSettingsViewController.h"
 
 
 @interface SLFTableViewController ()
@@ -20,8 +22,12 @@
 
 {
     NSArray * selfies;
-    UIButton * settingsButton;
-    UIButton * addNewButton;
+//    UIButton * settingsButton;
+//    UIButton * addNewButton;
+    SLFSettingsButton * settingsButtonView;
+    SLFSettingsViewController * settingsVC;
+    
+    
     
 }
 - (id)initWithStyle:(UITableViewStyle)style
@@ -80,9 +86,22 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     
     UIBarButtonItem * addNewSelfyButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(openNewSelfy)];
-    
+
     self.navigationItem.rightBarButtonItem = addNewSelfyButton;
+    
+    settingsButtonView = [[SLFSettingsButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    settingsButtonView.toggledTintColor = [UIColor redColor];
+
+    UIBarButtonItem * settingsButton = [[UIBarButtonItem alloc] initWithCustomView:settingsButtonView];
+    self.navigationItem.leftBarButtonItem = settingsButton;
+   [settingsButtonView addTarget:self action:@selector(openSettings) forControlEvents:UIControlEventTouchUpInside];
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self refreshSelfies];
+}
+
 
 -(void)openNewSelfy
 {
@@ -98,9 +117,28 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated
+-(void)openSettings
 {
-    [self refreshSelfies];
+    [settingsButtonView toggle];
+//    settingsButtonView.toggled = ![settingsButtonView isToggled];
+    int X = [settingsButtonView isToggled] ? SCREEN_WIDTH-52 : 0;
+    
+    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.navigationController.view.frame = CGRectMake(X, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    } completion:^(BOOL finished) {
+        if (![settingsButtonView isToggled])
+        {
+            [settingsVC.view removeFromSuperview];
+        }
+    }];
+     
+    if ([settingsButtonView isToggled])
+    {
+        settingsVC = [[SLFSettingsViewController alloc]initWithNibName:nil bundle:nil];
+        settingsVC.view.frame = CGRectMake(52-SCREEN_WIDTH, 0, SCREEN_WIDTH-52, SCREEN_HEIGHT);
+        [self.navigationController.view addSubview:settingsVC.view];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -201,3 +239,5 @@
 }
 
 @end
+
+

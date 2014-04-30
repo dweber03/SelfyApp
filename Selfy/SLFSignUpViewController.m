@@ -21,7 +21,7 @@
     //    UITextField * displayNameField;
     //    UITextField * passwordField;
     //    UITextField * emailField;
-    //    UIImageView * avatar;
+    UIImageView * avatar;
     
     float signupOrigY;
     
@@ -62,7 +62,7 @@
                    @"Username",
                    @"Password",
                    @"Display Name",
-                   @"Email",
+                   @"Email"
                    ];
     
     fields = [@[] mutableCopy];
@@ -143,17 +143,37 @@
     //
     //
     
+
+    avatar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"boss"]];
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 
 -(void)signUp
 {
+    [self hideKeyboard];
+    
     PFUser * user = [PFUser user];
+    
+    
+    
+    NSData * imageData = UIImagePNGRepresentation(avatar.image);
+    
+    PFFile * imageFile = [PFFile fileWithName:@"avatar.png" data:imageData];
     
     user.username = ((UITextField*)fields[0]).text;
     user.password = ((UITextField*)fields[1]).text;
     user.email = ((UITextField*)fields[3]).text;
     user[@"displayName"] = ((UITextField *)fields[2]).text;
+    user[@"avatar"] = imageFile;
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error == nil)

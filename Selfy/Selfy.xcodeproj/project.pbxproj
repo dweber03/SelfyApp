@@ -16,6 +16,8 @@
 		66AB4D921910073000E6322E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B741906BD8000DDA351 /* SystemConfiguration.framework */; };
 		66AB4D931910074400E6322E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A0B711906BD8000DDA351 /* MobileCoreServices.framework */; };
 		66AB4D941910079900E6322E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E4F1905884C0069AFDA /* CoreGraphics.framework */; };
+		66AB4D9A19112E8400E6322E /* SLFSettingsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AB4D9919112E8400E6322E /* SLFSettingsButton.m */; };
+		66AB4D9D19112EA400E6322E /* SLFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AB4D9C19112EA400E6322E /* SLFSettingsViewController.m */; };
 		66FD7E4E1905884C0069AFDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E4D1905884C0069AFDA /* Foundation.framework */; };
 		66FD7E521905884C0069AFDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FD7E511905884C0069AFDA /* UIKit.framework */; };
 		66FD7E581905884C0069AFDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FD7E561905884C0069AFDA /* InfoPlist.strings */; };
@@ -54,6 +56,10 @@
 		667A0B7C1906D41900DDA351 /* SLFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLFViewController.m; path = Selfy/SLFViewController.m; sourceTree = "<group>"; };
 		667A0B7E1906E4C500DDA351 /* SLFSelfyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFSelfyViewController.h; sourceTree = "<group>"; };
 		667A0B7F1906E4C500DDA351 /* SLFSelfyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFSelfyViewController.m; sourceTree = "<group>"; };
+		66AB4D9819112E8400E6322E /* SLFSettingsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFSettingsButton.h; sourceTree = "<group>"; };
+		66AB4D9919112E8400E6322E /* SLFSettingsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFSettingsButton.m; sourceTree = "<group>"; };
+		66AB4D9B19112EA400E6322E /* SLFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFSettingsViewController.h; sourceTree = "<group>"; };
+		66AB4D9C19112EA400E6322E /* SLFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFSettingsViewController.m; sourceTree = "<group>"; };
 		66FD7E4A1905884C0069AFDA /* Selfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FD7E4D1905884C0069AFDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66FD7E4F1905884C0069AFDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,16 +114,20 @@
 			isa = PBXGroup;
 			children = (
 				6635DDCB190E91B2005F50BC /* boss.png */,
-				66FD7E7C190588BB0069AFDA /* SLFTableViewController.h */,
-				66FD7E7D190588BB0069AFDA /* SLFTableViewController.m */,
-				667A0B7B1906D41900DDA351 /* SLFViewController.h */,
-				667A0B7C1906D41900DDA351 /* SLFViewController.m */,
+				66AB4D9B19112EA400E6322E /* SLFSettingsViewController.h */,
+				66AB4D9C19112EA400E6322E /* SLFSettingsViewController.m */,
+				66AB4D9819112E8400E6322E /* SLFSettingsButton.h */,
+				66AB4D9919112E8400E6322E /* SLFSettingsButton.m */,
 				6635DDCD190FDD2B005F50BC /* SLFSignUpViewController.h */,
 				6635DDCE190FDD2B005F50BC /* SLFSignUpViewController.m */,
+				667A0B7B1906D41900DDA351 /* SLFViewController.h */,
+				667A0B7C1906D41900DDA351 /* SLFViewController.m */,
 				667A0B7E1906E4C500DDA351 /* SLFSelfyViewController.h */,
 				667A0B7F1906E4C500DDA351 /* SLFSelfyViewController.m */,
 				66FD7E7F1905A8B30069AFDA /* SLFTableViewCell.h */,
 				66FD7E801905A8B30069AFDA /* SLFTableViewCell.m */,
+				66FD7E7C190588BB0069AFDA /* SLFTableViewController.h */,
+				66FD7E7D190588BB0069AFDA /* SLFTableViewController.m */,
 				66FD7E531905884C0069AFDA /* Selfy */,
 				66FD7E6C1905884C0069AFDA /* SelfyTests */,
 				66FD7E4C1905884C0069AFDA /* Frameworks */,
@@ -289,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AB4D9A19112E8400E6322E /* SLFSettingsButton.m in Sources */,
 				667A0B7D1906D41900DDA351 /* SLFViewController.m in Sources */,
 				66FD7E5E1905884C0069AFDA /* SLFAppDelegate.m in Sources */,
 				6635DDCF190FDD2B005F50BC /* SLFSignUpViewController.m in Sources */,
@@ -296,6 +307,7 @@
 				66FD7E5A1905884C0069AFDA /* main.m in Sources */,
 				667A0B801906E4C500DDA351 /* SLFSelfyViewController.m in Sources */,
 				66FD7E7E190588BB0069AFDA /* SLFTableViewController.m in Sources */,
+				66AB4D9D19112EA400E6322E /* SLFSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
