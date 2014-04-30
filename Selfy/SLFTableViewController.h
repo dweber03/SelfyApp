@@ -10,4 +10,11 @@
 
 @interface SLFTableViewController : UITableViewController
 
+// Copied this Code from the TweetLike App TLATableViewController.h
+
+//@property (nonatomic) NSMutableArray * fields;
+//
+//
+//@property (nonatomic, getter = ,readonly) BOOL navBarMoved;
+
 @end

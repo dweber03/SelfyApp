@@ -11,6 +11,8 @@
 #import <Parse/Parse.h>
 #import "SLFViewController.h"
 #import "SLFSelfyViewController.h"
+#import "SLFSettingsButton.h"
+
 
 
 @implementation SLFAppDelegate
@@ -33,7 +35,7 @@
     
     PFUser * user = [PFUser currentUser];
     NSString * username = user.username;
-    username = nil;
+//    username = nil;
     
     if (username == nil) {
         navController = [[UINavigationController alloc] initWithRootViewController:[[SLFViewController alloc]initWithNibName:nil bundle:nil]];

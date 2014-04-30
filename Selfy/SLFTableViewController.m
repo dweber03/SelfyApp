@@ -10,6 +10,7 @@
 #import "SLFTableViewCell.h"
 #import <Parse/Parse.h>
 #import "SLFSelfyViewController.h"
+#import "SLFSettingsButton.h"
 
 
 @interface SLFTableViewController ()
@@ -20,8 +21,13 @@
 
 {
     NSArray * selfies;
-    UIButton * settingsButton;
+    UIBarButtonItem * settingsButton;
     UIButton * addNewButton;
+//    UIView * settingsView;
+    SLFSettingsButton * settingsView;
+    
+    
+    
     
 }
 - (id)initWithStyle:(UITableViewStyle)style
@@ -82,6 +88,31 @@
     UIBarButtonItem * addNewSelfyButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(openNewSelfy)];
     
     self.navigationItem.rightBarButtonItem = addNewSelfyButton;
+    
+    settingsView = [[SLFSettingsButton alloc] initWithFrame: CGRectMake(0, 0, 20, 20)];
+    settingsView.tintColor = [UIColor blueColor];
+    settingsButton = [[UIBarButtonItem alloc] initWithCustomView:settingsView];
+    self.navigationItem.leftBarButtonItem = settingsButton;
+    
+    [self.navigationController.view addSubview:settingsView];
+    
+
+                      
+    
+//   self.navigationItem.leftBarButtonItem = settingsButton;
+    
+    
+    
+}
+
+-(void)settings
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        self.navigationController.view.frame = CGRectMake(320, 0, 20, 20);
+    }];
+    self.navigationItem.rightBarButtonItem = nil;
+    
+    
 }
 
 -(void)openNewSelfy
